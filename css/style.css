@@ -1,0 +1,297 @@
+@charset "UTF-8";
+/* eric reset */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+	box-sizing: border-box;
+}
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}/* eric/css/reset/end */
+body{
+	line-height: 1;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Ubuntu, "Helvetica Neue", Helvetica, Arial,"蘋⽅-繁", "PingFang TC", "⿊體-繁", "Heiti TC", "微軟正⿊體", "Microsoft JhengHei", sans-serif;
+	
+}
+img{
+    display: block;
+    width: 100%;
+}
+#topbar{
+	display: flex;
+	height: 80px;
+	padding: 15px;
+	background-color: rgba(255, 255, 255, 0.7);
+}
+.logo{
+	flex: 1;
+}
+#tapbar img{
+	max-height: 50px;
+}
+#topbar nav{
+	display: flex;
+	flex: 8;
+}
+#topbar nav div{
+	display: none;
+}
+.menu{
+	display: flex;
+	flex: 4;
+}
+.menu li{
+	position: relative;
+	flex: 1;
+	border-right: solid 1px #666;
+	margin: 10px 0;
+}
+.menu li:last-child{
+	border: none;
+}
+.menu a{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	height: 35px;
+	text-decoration: none;
+	color: rgb(124, 122, 122);
+}
+.menu div{
+	position: absolute;
+	top: 55px;
+	background-color: rgba(255, 255, 255, 0.7);
+	width: 100%;
+}
+.menu div a{
+	border-bottom: dotted 1xp #666;
+}
+#search_form{
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex: 1;
+	margin-right: 25px;
+}
+#search{
+	width: 100%;
+	height: 35px;
+	padding-left: 1em;
+}
+#search_btn{
+	position: absolute;
+	right: 10px;
+	width: 25px;
+	height: 25px;
+	background-image: url(../images/h-icon-search.svg);
+	background-size: 100%;
+	background-repeat: no-repeat;
+	background-color: transparent;
+	border: none;
+	cursor: pointer;	
+}
+.icon{
+	display: flex;
+	flex: 1;
+}
+.icon li{
+	flex: 1;
+	margin: 5px;
+}
+.carousel-item{
+	height: calc(100vh - 80px);
+}
+.carousel-item img{
+	object-fit: cover;
+	height: 100%;
+}
+#banner{
+	height: calc(100vh - 80px);
+}
+#foods{
+	display: flex;
+}
+#foods>div{
+	flex: 1;
+}
+.foodsimg{
+	position: relative;
+	background-image: url(../images/bg_s.jpg);
+	background-size: 100% 100%;
+}
+@keyframes food_1 {
+	from { right:110%; transform: rotate(0deg);}
+	to {right:-70px; transform: rotate(360deg);}
+}
+.food_1{
+	width: 350px;
+	position: absolute;
+	top: 80px;
+	right: 110px;
+	animation: food_1 2s forwards;
+}
+@keyframes food_2 {
+	from { left:-50%; transform: rotate(180deg);}
+	to {  left:10px; transform: rotate(360deg);}
+}
+.food_2{
+	width: 250px;
+	position: absolute;
+	top: 40px;
+	left: -50%;
+	animation: food_2 2s 1s forwards;
+}
+.foodstext{
+	padding: 80px 100px;
+}
+.foodstext *{
+	color: #444;
+	margin: 30px 0;
+}
+.foodstext h2{
+	position: relative;
+	font-size: 2rem;
+}
+.foodstext h2::before{
+	content: "";
+	position: absolute;
+	top: 20px;
+	left: -15px;
+	width: 15px;
+	height: 15px;
+	background-color: #0152b9;
+	border-radius: 10px;
+}
+.foodstext h2::after{
+	content: "";
+	position: absolute;
+	top: 5px;
+	width: 1rem;
+	height: 10px;
+	background-color: #0152b9;
+	border-radius: 10px;
+}
+.foodstext p{
+	line-height: 1.5rem;
+}
+.foodstext a{
+	color: rgb(65, 124, 124);
+}
+#new{
+	height: 100vh;
+}
+.title{
+	font-size: 2rem;
+	border-left: solid 5px #0152b9;
+}
+/* tabs ui */
+.ui-widget-header{
+	border: none;
+	background: transparent;
+}
+.ui-tabs .ui-tabs-nav{
+	display: flex;
+}
+.ui-state-active, .ui-widget-content .ui-state-active, .ui-widget-header .ui-state-active, a.ui-button:active, .ui-button:active, .ui-button.ui-state-active:hover{
+	border: 1px solid #666;
+    background: white;
+}
+.ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default, .ui-button, html .ui-button.ui-state-disabled:hover, html .ui-button.ui-state-disabled:active{
+	background: white;
+}
+.ui-tabs .ui-tabs-nav li{
+	border-bottom-width: 1px;
+	border-radius: 3px;
+}
+#tabs>div{
+	display: flex;
+}
+.photo{
+	flex: 1;
+	margin-right: 50px;
+}
+.photo img{
+	max-height: 50vh;
+	width: auto;
+}
+.text{
+	flex: 1;
+}
+.text *{
+	margin: 10px 0;
+}
+#tabs h2{
+	font-size: 1.2rem;
+}
+#tabs data{
+	display: block;
+	font-size: 2rem;
+	border-left:#0152b9 solid 10px ;
+	padding-left: 1rem;
+}
+.text div{
+	display: inline-block;
+	font-size: 2rem;
+	font-weight: bold;
+	background-color: rgb(255, 208, 0);
+	box-shadow: 5px 5px 0 red;
+	padding: 10px;
+}
+.contact{
+	font-size: 1.2rem;
+}
+.row h2 ,.row p{
+	text-align: center;
+	margin-top: 10px;
+}
+.row a{
+	color: #444;
+	text-decoration: none;
+}
+.row a:hover{
+	text-decoration: underline;
+}
+.row h2{
+	font-weight: bold;
+	font-size: 1.2rem;
+}
+.row p{
+	color: red;
+}
